@@ -23,10 +23,10 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "decoder.layers.11.fc2",
-    "decoder.layers.11.fc1",
+    "encoder.layers.11.fc2",
     "encoder.layers.11.fc1",
-    "encoder.layers.11.fc2"
+    "decoder.layers.11.fc1",
+    "decoder.layers.11.fc2"
   ],
   "task_type": null,
   "use_dora": false,
