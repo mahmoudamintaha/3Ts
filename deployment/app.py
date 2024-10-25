@@ -3,6 +3,26 @@ import streamlit as st
 import os
 
 
+# Set the theme to dark
+st.set_page_config(page_title="Talk to text", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
+
+# Optional: Add this to change the theme to dark mode
+st.markdown(
+    """
+    <style>
+    .css-1y4k23f {
+        background-color: #121212; /* Dark background */
+        color: #ffffff; /* Light text */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Your Streamlit app code here
+st.title("Talk to text")
+
+
 
 def save_audio_file(audio_bytes, file_extension):
     file_name = f"audio.{file_extension}"

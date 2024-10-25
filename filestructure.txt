@@ -1,9 +1,11 @@
+|-- .devcontainer
+    |-- devcontainer.json
 |-- .gitattributes
 |-- deployment
     |-- app.py
-    |-- img
-        |-- img2.png
+    |-- img2.png
     |-- model.py
+    |-- requirements.txt
     |-- whisper_finetuned_V2
         |-- adapter_config.json
         |-- adapter_model.safetensors
@@ -76,8 +78,6 @@
         |-- tokenizer_config.json
         |-- training_args.bin
         |-- vocab.json
-    |-- __pycache__
-        |-- model.cpython-311.pyc
 |-- Project data
     |-- speech_recognition_dataset
         |-- data-00000-of-00001.arrow

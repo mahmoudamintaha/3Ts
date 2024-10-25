@@ -3,6 +3,8 @@
 
 This repository contains the code, dataset, and fine-tuned model for a speech recognition project using [Whisper](https://huggingface.co/models?other=whisper) from Hugging Face. The project aims to convert speech (audio files) to text by fine-tuning a pre-trained Whisper model.
 
+## Visit the web-app:[Here](https://talktotext.streamlit.app/)
+
 ## Repository Structure
 
 ```
