@@ -18,13 +18,6 @@ import streamlit as st
 current_dir = os.path.dirname(os.path.abspath(__file__))
 __model_path = os.path.join(current_dir, "whisper_finetuned_V2")
 
-# Debug
-st.write(f"Model path: {__model_path}")
-
-if os.path.exists(__model_path):
-    st.write("Model path exists.")
-else:
-    st.write("Model path does not exist.")
 
 # Load model with explicit local path settings
 __model = WhisperForConditionalGeneration.from_pretrained(

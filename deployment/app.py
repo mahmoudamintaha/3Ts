@@ -13,8 +13,9 @@ def save_audio_file(audio_bytes, file_extension):
     return file_name
 
 
-
-image_path = 'img2.png'
+# Get the absolute path to the model directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+image_path = os.path.join(current_dir, 'img2.png')
 
 
 st.image(image_path, use_column_width=True)
