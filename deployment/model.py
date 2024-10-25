@@ -17,16 +17,20 @@ from transformers import WhisperForConditionalGeneration, WhisperProcessor
 current_dir = os.path.dirname(os.path.abspath(__file__))
 __model_path = os.path.join(current_dir, "whisper_finetuned_V2")
 
+# Debug
+st.write(f"Model path: {__model_path}")
+
+if os.path.exists(__model_path):
+    st.write("Model path exists.")
+else:
+    st.write("Model path does not exist.")
+
 # Load model with explicit local path settings
 __model = WhisperForConditionalGeneration.from_pretrained(
-    __model_path,
-    local_files_only=True
-)
+    __model_path)
 
 __processor = WhisperProcessor.from_pretrained(
-    __model_path,
-    local_files_only=True
-)
+    __model_path)
 
 
 def __load_custom_dataset_pip(data):
