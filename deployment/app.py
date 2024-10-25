@@ -13,7 +13,7 @@ def save_audio_file(audio_bytes, file_extension):
 
 
 
-image_path = 'img\img2.png'
+image_path = 'img/img2.png'
 st.image(image_path, use_column_width=True)
 
 tab1, tab2 = st.tabs(["Record Audio", "Upload Audio"])
