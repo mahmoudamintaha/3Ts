@@ -4,9 +4,7 @@ import os
 
 
 # Set the theme to dark
-st.set_page_config(page_title="Talk to text", page_icon=":guardsman:", initial_sidebar_state="expanded")
-
-st.title("Talk to text")
+st.set_page_config(page_title="Talk to text", page_icon=":headphones:", initial_sidebar_state="expanded")
 
 
 
