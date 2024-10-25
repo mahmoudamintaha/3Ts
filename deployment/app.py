@@ -6,20 +6,34 @@ import os
 # Set the theme to dark
 st.set_page_config(page_title="Talk to text", page_icon=":guardsman:", initial_sidebar_state="expanded")
 
-# Optional: Add this to change the theme to dark mode
 st.markdown(
     """
     <style>
-    .css-1y4k23f {
-        background-color: #121212; /* Dark background */
-        color: #ffffff; /* Light text */
+    /* Background color for the main page */
+    .css-18e3th9 {
+        background-color: #121212;
+    }
+    /* Background color for the sidebar */
+    .css-1d391kg {
+        background-color: #333333;
+    }
+    /* Text color for sidebar and main text */
+    .css-1d391kg, .css-18e3th9 {
+        color: #ffffff;
+    }
+    /* Additional styling for headers, buttons, etc. */
+    .st-bx {
+        color: #ffffff;
+    }
+    .st-bt {
+        color: #ffffff;
+        background-color: #444444;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Your Streamlit app code here
 st.title("Talk to text")
 
 
