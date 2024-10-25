@@ -6,6 +6,7 @@ import noisereduce as nr
 from pydub import AudioSegment
 from datasets import Dataset
 from transformers import WhisperForConditionalGeneration, WhisperProcessor
+import streamlit as st
 
 
 #__model_path = "whisper_finetuned_V2"
