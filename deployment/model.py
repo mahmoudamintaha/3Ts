@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import torch
 import librosa
 import noisereduce as nr
@@ -7,10 +8,25 @@ from datasets import Dataset
 from transformers import WhisperForConditionalGeneration, WhisperProcessor
 
 
-__model_path = "whisper_finetuned_V2"
+#__model_path = "whisper_finetuned_V2"
 
-__model = WhisperForConditionalGeneration.from_pretrained(__model_path)
-__processor = WhisperProcessor.from_pretrained(__model_path)
+#__model = WhisperForConditionalGeneration.from_pretrained(__model_path)
+#__processor = WhisperProcessor.from_pretrained(__model_path)
+
+# Get the absolute path to the model directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+__model_path = os.path.join(current_dir, "whisper_finetuned_V2")
+
+# Load model with explicit local path settings
+__model = WhisperForConditionalGeneration.from_pretrained(
+    __model_path,
+    local_files_only=True
+)
+
+__processor = WhisperProcessor.from_pretrained(
+    __model_path,
+    local_files_only=True
+)
 
 
 def __load_custom_dataset_pip(data):
