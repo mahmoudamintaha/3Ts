@@ -1,11 +1,11 @@
 import model
 import streamlit as st
 import os
+import gc  # Import garbage collection module
 
 
 # Set the theme to dark
 st.set_page_config(page_title="Talk to text", page_icon=":headphones:", initial_sidebar_state="expanded")
-
 
 
 def save_audio_file(audio_bytes, file_extension):
@@ -33,6 +33,8 @@ with tab1:
         try:
             audio_bytes = recorded_audio.getvalue()
             save_audio_file(audio_bytes, "wav")
+            del audio_bytes  # Clear memory after saving
+            gc.collect()
         except:
             st.write("Re-record the audio.")
 
@@ -44,6 +46,8 @@ with tab2:
             audio_bytes = uploaded_audio.getvalue()
             st.audio(audio_bytes, format="audio/wav")
             save_audio_file(audio_bytes, "wav")
+            del audio_bytes  # Clear memory after saving
+            gc.collect()
         except:
             st.write("File is corrupted.")
         
@@ -56,7 +60,7 @@ if st.button("Transcribe"):
         try:
             transcript_text = model.get_transcript('audio.wav')
         except:
-            st.write("An error accurred during transcription.")
+            st.write("An error occurred during transcription.")
 
     # Display the transcript
     st.header("Transcript")
@@ -68,6 +72,7 @@ if st.button("Transcribe"):
 
     # Provide a download button for the transcript
     st.download_button("Download Transcript", transcript_text)
-    
-    
-    
+
+    # Clear up memory after each transcription generation
+    del transcript_text  # Delete transcript text to free memory
+    gc.collect()  # Explicitly call garbage collection
