@@ -10,21 +10,34 @@ This repository contains the code, dataset, and fine-tuned model for a speech re
    ├── Audio files (.wav or .mp3)
    └── Corresponding text files (.txt)
 
-📁 fine-tuned model
-   └── Model files after fine-tuning Whisper model
-
-📄 Talk To Text.ipynb
+📁 deployment
+   ├── app.py
+   ├── img/
+   │   └── img2.png
+   ├── model.py
+   └── whisper_finetuned_V2/
+       ├── Model files after fine-tuning Whisper model
+       └── Checkpoints, configuration files, and tokenizer
+           
+📄 Triple_T_Fine_Tuned_Whisper-small.ipynb
    └── Jupyter notebook containing preprocessing, training, model saving, and evaluation code
+
+📄 T3_Production_V2_FT_Whisper-small.ipynb
+   └── Jupyter notebook containing the final pipe-line usen in inference 
+
+📄 requirements.txt
+📄 README.md
+📄 team presentation/Triple T.pptx
+   └── a power-point presentation showing our team members' names
 ```
 
 ### Contents
-- **`Project data/speech_recognition_dataset/`**: This folder contains the dataset used for training, which includes audio files and their corresponding transcriptions.
-- **`fine-tuned model/`**: This folder stores the Whisper model after fine-tuning on the dataset.
-- **`Talk To Text.ipynb`**: A comprehensive notebook that walks through the steps of:
-  1. Preprocessing the dataset (loading audio files, extracting features, and preparing text labels).
-  2. Fine-tuning the Whisper model.
-  3. Saving the trained model for inference.
-  4. Evaluating the model's performance on test data.
+
+- **`Project data/speech_recognition_dataset/`**: Contains the dataset used for training, including audio files and their corresponding transcriptions.
+- **`deployment/app.py`**: Application script for deploying the fine-tuned model.
+- **`deployment/model.py`**: Model file containing the setup and loading of the Whisper model for inference.
+- **`deployment/whisper_finetuned_V2/`**: Folder storing the fine-tuned Whisper model, checkpoints, configuration files, and tokenizer settings.
+- **`requirements.txt`**: Lists necessary packages for the project.
 
 ## Model
 
@@ -73,10 +86,8 @@ The audio data is preprocessed using librosa to convert the audio into the forma
 
 The evaluation of the model is done using the **Word Error Rate (WER)** metric, which is calculated by comparing the model’s predicted transcription to the ground truth transcription.
 
-## Contributions
-
-Feel free to open issues or pull requests if you'd like to contribute!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Team Members
+- [Essam Omar](https://github.com/eoabdulhalim)
+- [Mostafa Ashraf](https://github.com/M0STAFA-A4F)
+- [Mahmoud Amin](https://github.com/mahmoudamintaha)
+- Salem El-Sayed
