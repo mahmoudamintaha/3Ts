@@ -4,7 +4,7 @@ import os
 
 
 # Set the theme to dark
-st.set_page_config(page_title="Talk to text", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Talk to text", page_icon=":guardsman:", initial_sidebar_state="expanded")
 
 # Optional: Add this to change the theme to dark mode
 st.markdown(
