@@ -1,6 +1,5 @@
 |-- app.py
-|-- img
-    |-- img2.png
+|-- img2.png
 |-- model.py
 |-- requirements.txt
 |-- whisper_finetuned_V2

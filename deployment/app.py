@@ -14,19 +14,8 @@ def save_audio_file(audio_bytes, file_extension):
 
 
 
-#image_path = 'img/img2.png'
+image_path = 'img2.png'
 
-# Get the current directory of the script
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Build the path to the image file
-image_path = os.path.join(current_dir, "img2.png")
-
-# Verify if the path exists
-if os.path.exists(image_path):
-    print(f"Image path exists: {image_path}")
-else:
-    print(f"Image path does not exist: {image_path}")
 
 st.image(image_path, use_column_width=True)
 
